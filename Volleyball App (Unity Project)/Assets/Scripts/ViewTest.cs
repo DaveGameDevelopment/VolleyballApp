@@ -16,5 +16,9 @@ public class ViewTest : MonoBehaviour
 
         text_title.SetText(data.title);
         text_description.SetText(data.description);
+
+        AppManager.instance.currTest = testDatas[testIndex];
+
+        FindObjectOfType<ViewActive>().LoadAllText();
     }
 }
